@@ -31,7 +31,7 @@ def get_solution(board):
 
 def xout(board, row, col):
     """X out spots on a chessboard.
-    
+
     All spots where non-attacking queens can no
     longer be played are X-ed out.
 
