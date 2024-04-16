@@ -1,21 +1,15 @@
 #!/usr/bin/python3
-"""method for student creation"""
-
-
-class Student:
-    """Student obj, interesting how you don't have to directly
-    test for strings in a loop, python is weird"""
-
-    def __init__(self, first_name, last_name, age):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
-
-    def to_json(self, attrs=None):
-        if attrs is None:
-            return self.__dict__
-        new_dictionary = {}
-        for key, value in self.__dict__.items():
-            if key in attrs:
-                new_dictionary[key] = value
-        return new_dictionary
+def pascal_triangle(n):
+    """ Pascal Triangle 1h"""
+    li = []
+    if n <= 0:
+        return li
+    for r in range(n):
+        for c in range(r + 1):
+            if c == 0:
+                li.append([1])
+            elif c == r:
+                li[r].append(1)
+            else:
+                li[r].append(li[r - 1][c] + li[r - 1][c - 1])
+    return li
