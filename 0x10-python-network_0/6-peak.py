@@ -13,7 +13,7 @@ def find_peak(list_of_integers):
 
     if mid_id != len(list_of_integers) - 1:
         if list_of_integers[mid_id - 1] < list_of_integers[mid_id] \
-            and list_of_integers[mid_id + 1] < list_of_integers[mid_id]:
+             and list_of_integers[mid_id + 1] < list_of_integers[mid_id]:
             return list_of_integers[mid_id]
     else:
         if list_of_integers[mid_id - 1] < list_of_integers[mid_id]:
